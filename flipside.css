@@ -1,0 +1,17 @@
+#flip-side{
+    margin:0 auto;
+    width:70%;
+    position:relative;
+}
+
+#flip-side h1{
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 50px;
+}
+
+#flip-side h3{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+}
