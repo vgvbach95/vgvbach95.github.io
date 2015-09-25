@@ -16,14 +16,23 @@ $(function() {
         var itemHTML = '<li pName="'+pName+'" class="navbar-button work-button"><a>'+ pName +'</a></li>';
         navbar.append(itemHTML);
     });
-
+    
+    var flag = false;
     $('.navbar-button').bind("click touchstart", function(){
+        if(!flag){
+            flag = true;
+            setTimeout(function(){flag = false;}, 100);
         $('.content-pane').hide();
         var pName = $(this).attr("pname");
         $('.content-pane[pName="'+pName+'"]').show();
+        }
+        return false;
     });
 
     $('#flip-side-button').bind("click touchstart", function(){
+        if(!flag){
+            flag = true;
+            setTimeout(function(){flag = false;}, 100);
         if($('.work-button').is(':visible')){
             $('.work-button').hide();
             $('.cosplay-button').show();
@@ -42,6 +51,8 @@ $(function() {
                 $(this).css('background-image', 'linear-gradient(rgba(228,104,93,0),rgba(228,104,93,.5))');
             });
         }
+        }
+        return false;
     });
 
     $('.project-profile').each(function(){
@@ -59,9 +70,14 @@ $(function() {
     });
 
     $('.card-button').bind("click touchstart", function(){
+        if(!flag){
+            flag = true;
+            setTimeout(function(){flag = false;}, 100);
        $('.profile').hide();
         var pName = $(this).attr("pname");
         $('.profile[pName="'+pName+'"]').show();
+        }
+        return false;
     });
 
     $('.art_image').each(function(){
