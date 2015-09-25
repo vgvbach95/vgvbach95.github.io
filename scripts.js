@@ -17,13 +17,13 @@ $(function() {
         navbar.append(itemHTML);
     });
 
-    $('.navbar-button').click(function(){
+    $('.navbar-button').bind("click touchstart", function(){
         $('.content-pane').hide();
         var pName = $(this).attr("pname");
         $('.content-pane[pName="'+pName+'"]').show();
     });
 
-    $('#flip-side-button').click(function(){
+    $('#flip-side-button').bind("click touchstart", function(){
         if($('.work-button').is(':visible')){
             $('.work-button').hide();
             $('.cosplay-button').show();
@@ -58,7 +58,7 @@ $(function() {
         project_navbar.append(itemHTML);
     });
 
-    $('.card-button').click(function(){
+    $('.card-button').bind("click touchstart", function(){
        $('.profile').hide();
         var pName = $(this).attr("pname");
         $('.profile[pName="'+pName+'"]').show();
