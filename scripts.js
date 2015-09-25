@@ -28,29 +28,29 @@ $(function() {
         }
         return false;
     });
-
+    var flag2 = false;
     $('#flip-side-button').bind("click touchstart", function(){
-        if(!flag){
-            flag = true;
-            setTimeout(function(){flag = false;}, 100);
-        if($('.work-button').is(':visible')){
-            $('.work-button').hide();
-            $('.cosplay-button').show();
-            $('#navbar').css('background','#f96e5b');
-            $('#flip-side').css('color','#494e5b');
-            $('.card-button').each(function(){
-                $(this).css('background-image', 'linear-gradient(rgba(73,78,91,0),rgba(73,78,91,.5))');
-            });
-        }
-        else {
-            $('.work-button').show();
-            $('.cosplay-button').hide();
-            $('#navbar').css('background','#494e5b');
-            $('#flip-side').css('color','#f96e5b');
-            $('.card-button').each(function(){
-                $(this).css('background-image', 'linear-gradient(rgba(228,104,93,0),rgba(228,104,93,.5))');
-            });
-        }
+        if(!flag2){
+            flag2 = true;
+            setTimeout(function(){flag2 = false;}, 200);
+            if($('.work-button').is(':visible')){
+                $('.work-button').hide();
+                $('.cosplay-button').show();
+                $('#navbar').css('background','#f96e5b');
+                $('#flip-side').css('color','#494e5b');
+                $('.card-button').each(function(){
+                    $(this).css('background-image', 'linear-gradient(rgba(73,78,91,0),rgba(73,78,91,.5))');
+                });
+            }
+            else {
+                $('.work-button').show();
+                $('.cosplay-button').hide();
+                $('#navbar').css('background','#494e5b');
+                $('#flip-side').css('color','#f96e5b');
+                $('.card-button').each(function(){
+                    $(this).css('background-image', 'linear-gradient(rgba(228,104,93,0),rgba(228,104,93,.5))');
+                });
+            }
         }
         return false;
     });
